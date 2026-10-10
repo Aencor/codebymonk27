@@ -38,6 +38,11 @@ $block_attrs = cbm_block_attributes($block, 'py-16 sm:py-24 md:py-32 bg-[#163be6
 			<!-- Quick Social Links -->
 			<div class="flex flex-wrap items-center gap-4 pt-6 text-xs font-mono text-white/80">
 				<span>Redes:</span>
+				<a href="https://linkedin.com/in/alberto-enrique-contreras-romero" target="_blank" rel="noopener" class="hover:text-cyan-300 inline-flex items-center gap-1.5 transition-colors underline underline-offset-4">
+					<i class="fa-brands fa-linkedin"></i>
+					<span>linkedin/alberto-contreras</span>
+				</a>
+				<span>•</span>
 				<a href="https://github.com/aencor" target="_blank" rel="noopener" class="hover:text-white inline-flex items-center gap-1.5 transition-colors underline underline-offset-4">
 					<i class="fa-brands fa-github"></i>
 					<span>github/aencor</span>

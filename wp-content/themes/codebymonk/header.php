@@ -38,11 +38,12 @@
     </a>
 
     <!-- Navigation Links -->
-    <nav class="hidden md:flex items-center gap-7 text-xs sm:text-sm font-bold tracking-tight text-[#555555] dark:text-[#a0a0a0]">
+    <nav class="hidden md:flex items-center gap-6 lg:gap-7 text-xs sm:text-sm font-bold tracking-tight text-[#555555] dark:text-[#a0a0a0]">
       <a href="<?php echo esc_url(home_url('/#servicios')); ?>" class="hover:text-[#111111] dark:hover:text-white transition-colors">Servicios</a>
       <a href="<?php echo esc_url(home_url('/portafolio/')); ?>" class="hover:text-[#111111] dark:hover:text-white transition-colors">Portafolio</a>
       <a href="<?php echo esc_url(home_url('/casos-de-estudio/')); ?>" class="hover:text-[#111111] dark:hover:text-white transition-colors">Casos de Estudio</a>
       <a href="<?php echo esc_url(home_url('/#sobre-mi')); ?>" class="hover:text-[#111111] dark:hover:text-white transition-colors">Sobre mí</a>
+      <a href="<?php echo esc_url(home_url('/cv/')); ?>" class="text-[#eb3a24] hover:text-[#111111] dark:hover:text-white font-mono transition-colors">Mi CV</a>
       <a href="<?php echo esc_url(home_url('/articulos/')); ?>" class="hover:text-[#111111] dark:hover:text-white transition-colors">Taller</a>
       <a href="<?php echo esc_url(home_url('/#contacto')); ?>" class="hover:text-[#111111] dark:hover:text-white transition-colors">Contacto</a>
     </nav>

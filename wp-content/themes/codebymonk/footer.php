@@ -9,8 +9,16 @@
       <span class="text-[#555555]">/ Todos los derechos reservados.</span>
     </div>
 
-    <!-- Social Links -->
+    <!-- Links -->
     <div class="flex flex-wrap items-center gap-5 sm:gap-6 text-[#aaaaaa]">
+      <a href="<?php echo esc_url(home_url('/cv/')); ?>" class="text-[#eb3a24] hover:text-white inline-flex items-center gap-1.5 transition-colors font-bold">
+        <i class="fa-solid fa-file-pdf text-sm"></i>
+        <span>MI CV (PDF)</span>
+      </a>
+      <a href="https://linkedin.com/in/alberto-enrique-contreras-romero" target="_blank" rel="noopener" class="hover:text-[#0077b5] inline-flex items-center gap-1.5 transition-colors">
+        <i class="fa-brands fa-linkedin text-sm"></i>
+        <span>LINKEDIN</span>
+      </a>
       <a href="https://github.com/aencor" target="_blank" rel="noopener" class="hover:text-white inline-flex items-center gap-1.5 transition-colors">
         <i class="fa-brands fa-github text-sm"></i>
         <span>GITHUB</span>
