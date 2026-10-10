@@ -77,68 +77,142 @@
 
       <!-- Mobile Menu Toggle Button -->
       <button id="mobile-menu-toggle" type="button" aria-label="Abrir menú" aria-expanded="false" class="md:hidden w-9 h-9 rounded-full flex items-center justify-center bg-[#eaeae4] dark:bg-[#1a1a1f] text-[#111111] dark:text-[#f3f4f6] hover:bg-[#deded6] dark:hover:bg-[#282830] transition-colors border border-[#dcdcd4] dark:border-[#333333] focus:outline-none">
-        <i id="mobile-menu-icon-open" class="fa-solid fa-bars text-sm"></i>
-        <i id="mobile-menu-icon-close" class="fa-solid fa-xmark text-base hidden text-[#eb3a24]"></i>
+        <i class="fa-solid fa-bars text-sm"></i>
       </button>
     </div>
   </div>
+</header>
 
-  <!-- Mobile Navigation Drawer Overlay -->
-  <div id="mobile-menu" class="fixed inset-x-0 top-16 bottom-0 z-40 bg-[#f4f4f0]/98 dark:bg-[#0a0a0c]/98 backdrop-blur-xl md:hidden opacity-0 pointer-events-none transition-all duration-300 flex flex-col justify-between py-6 px-6 overflow-y-auto border-t border-[#e2e2dc] dark:border-[#222222]">
-    <div class="space-y-4">
-      <span class="text-[10px] font-mono uppercase tracking-widest text-[#737373] dark:text-[#888888] block border-b border-[#e2e2dc] dark:border-[#222222] pb-2">
+<!-- Standalone Mobile Navigation Drawer (Viewport Root Level to Prevent Backdrop-Filter Clipping) -->
+<div id="mobile-menu" class="hidden fixed inset-0 z-[9999] bg-[#f4f4f0] dark:bg-[#0a0a0c] text-[#111111] dark:text-[#f3f4f6] md:hidden flex-col justify-between p-6 overflow-y-auto">
+  <div>
+    <!-- Drawer Top Header Bar -->
+    <div class="flex items-center justify-between pb-6 border-b border-[#e2e2dc] dark:border-[#222222]">
+      <a href="<?php echo esc_url(home_url('/')); ?>" class="mobile-nav-link flex items-center gap-2">
+        <div class="w-8 h-8 rounded-lg bg-[#111111] dark:bg-white text-white dark:text-[#111111] flex items-center justify-center font-mono font-bold text-xs">
+          (••)
+        </div>
+        <span class="font-display font-black text-lg tracking-tight uppercase text-[#111111] dark:text-white">
+          CBM
+        </span>
+      </a>
+
+      <button id="mobile-menu-close" type="button" aria-label="Cerrar menú" class="w-10 h-10 rounded-full flex items-center justify-center bg-[#eaeae4] dark:bg-[#1a1a1f] text-[#eb3a24] hover:bg-[#deded6] dark:hover:bg-[#282830] transition-colors border border-[#dcdcd4] dark:border-[#333333] focus:outline-none">
+        <i class="fa-solid fa-xmark text-lg"></i>
+      </button>
+    </div>
+
+    <!-- Navigation Links -->
+    <div class="pt-6">
+      <span class="text-[10px] font-mono uppercase tracking-widest text-[#737373] dark:text-[#888888] block mb-4">
         // MENÚ DE NAVEGACIÓN
       </span>
       
-      <nav class="flex flex-col space-y-1">
-        <a href="<?php echo esc_url(home_url('/#servicios')); ?>" class="mobile-nav-link group flex items-center justify-between py-3 border-b border-[#e8e8e2] dark:border-[#1a1a22] text-lg font-display font-black uppercase text-[#111111] dark:text-white hover:text-[#eb3a24] dark:hover:text-[#eb3a24] transition-colors">
+      <nav class="flex flex-col">
+        <a href="<?php echo esc_url(home_url('/#servicios')); ?>" class="mobile-nav-link group flex items-center justify-between py-2.5 border-b border-[#e8e8e2] dark:border-[#1a1a22] text-sm sm:text-base font-display font-bold uppercase text-[#111111] dark:text-white hover:text-[#eb3a24] dark:hover:text-[#eb3a24] transition-colors">
           <span>Servicios</span>
-          <span class="text-xs font-mono text-[#737373] dark:text-[#666666] group-hover:text-[#eb3a24]">01</span>
+          <span class="text-[11px] font-mono text-[#737373] dark:text-[#666666] group-hover:text-[#eb3a24]">01</span>
         </a>
-        <a href="<?php echo esc_url(home_url('/portafolio/')); ?>" class="mobile-nav-link group flex items-center justify-between py-3 border-b border-[#e8e8e2] dark:border-[#1a1a22] text-lg font-display font-black uppercase text-[#111111] dark:text-white hover:text-[#eb3a24] dark:hover:text-[#eb3a24] transition-colors">
+        <a href="<?php echo esc_url(home_url('/portafolio/')); ?>" class="mobile-nav-link group flex items-center justify-between py-2.5 border-b border-[#e8e8e2] dark:border-[#1a1a22] text-sm sm:text-base font-display font-bold uppercase text-[#111111] dark:text-white hover:text-[#eb3a24] dark:hover:text-[#eb3a24] transition-colors">
           <span>Portafolio</span>
-          <span class="text-xs font-mono text-[#737373] dark:text-[#666666] group-hover:text-[#eb3a24]">02</span>
+          <span class="text-[11px] font-mono text-[#737373] dark:text-[#666666] group-hover:text-[#eb3a24]">02</span>
         </a>
-        <a href="<?php echo esc_url(home_url('/casos-de-estudio/')); ?>" class="mobile-nav-link group flex items-center justify-between py-3 border-b border-[#e8e8e2] dark:border-[#1a1a22] text-lg font-display font-black uppercase text-[#111111] dark:text-white hover:text-[#eb3a24] dark:hover:text-[#eb3a24] transition-colors">
+        <a href="<?php echo esc_url(home_url('/casos-de-estudio/')); ?>" class="mobile-nav-link group flex items-center justify-between py-2.5 border-b border-[#e8e8e2] dark:border-[#1a1a22] text-sm sm:text-base font-display font-bold uppercase text-[#111111] dark:text-white hover:text-[#eb3a24] dark:hover:text-[#eb3a24] transition-colors">
           <span>Casos de Estudio</span>
-          <span class="text-xs font-mono text-[#737373] dark:text-[#666666] group-hover:text-[#eb3a24]">03</span>
+          <span class="text-[11px] font-mono text-[#737373] dark:text-[#666666] group-hover:text-[#eb3a24]">03</span>
         </a>
-        <a href="<?php echo esc_url(home_url('/#sobre-mi')); ?>" class="mobile-nav-link group flex items-center justify-between py-3 border-b border-[#e8e8e2] dark:border-[#1a1a22] text-lg font-display font-black uppercase text-[#111111] dark:text-white hover:text-[#eb3a24] dark:hover:text-[#eb3a24] transition-colors">
+        <a href="<?php echo esc_url(home_url('/#sobre-mi')); ?>" class="mobile-nav-link group flex items-center justify-between py-2.5 border-b border-[#e8e8e2] dark:border-[#1a1a22] text-sm sm:text-base font-display font-bold uppercase text-[#111111] dark:text-white hover:text-[#eb3a24] dark:hover:text-[#eb3a24] transition-colors">
           <span>Sobre mí</span>
-          <span class="text-xs font-mono text-[#737373] dark:text-[#666666] group-hover:text-[#eb3a24]">04</span>
+          <span class="text-[11px] font-mono text-[#737373] dark:text-[#666666] group-hover:text-[#eb3a24]">04</span>
         </a>
-        <a href="<?php echo esc_url(home_url('/cv/')); ?>" class="mobile-nav-link group flex items-center justify-between py-3 border-b border-[#e8e8e2] dark:border-[#1a1a22] text-lg font-display font-black uppercase text-[#eb3a24] hover:text-[#111111] dark:hover:text-white transition-colors">
+        <a href="<?php echo esc_url(home_url('/cv/')); ?>" class="mobile-nav-link group flex items-center justify-between py-2.5 border-b border-[#e8e8e2] dark:border-[#1a1a22] text-sm sm:text-base font-display font-bold uppercase text-[#eb3a24] hover:text-[#111111] dark:hover:text-white transition-colors">
           <span>Mi CV</span>
-          <span class="text-xs font-mono text-[#eb3a24]">05</span>
+          <span class="text-[11px] font-mono text-[#eb3a24]">05</span>
         </a>
-        <a href="<?php echo esc_url(home_url('/articulos/')); ?>" class="mobile-nav-link group flex items-center justify-between py-3 border-b border-[#e8e8e2] dark:border-[#1a1a22] text-lg font-display font-black uppercase text-[#111111] dark:text-white hover:text-[#eb3a24] dark:hover:text-[#eb3a24] transition-colors">
+        <a href="<?php echo esc_url(home_url('/articulos/')); ?>" class="mobile-nav-link group flex items-center justify-between py-2.5 border-b border-[#e8e8e2] dark:border-[#1a1a22] text-sm sm:text-base font-display font-bold uppercase text-[#111111] dark:text-white hover:text-[#eb3a24] dark:hover:text-[#eb3a24] transition-colors">
           <span>Taller / Blog</span>
-          <span class="text-xs font-mono text-[#737373] dark:text-[#666666] group-hover:text-[#eb3a24]">06</span>
+          <span class="text-[11px] font-mono text-[#737373] dark:text-[#666666] group-hover:text-[#eb3a24]">06</span>
         </a>
-        <a href="<?php echo esc_url(home_url('/#contacto')); ?>" class="mobile-nav-link group flex items-center justify-between py-3 text-lg font-display font-black uppercase text-[#111111] dark:text-white hover:text-[#eb3a24] dark:hover:text-[#eb3a24] transition-colors">
+        <a href="<?php echo esc_url(home_url('/#contacto')); ?>" class="mobile-nav-link group flex items-center justify-between py-2.5 text-sm sm:text-base font-display font-bold uppercase text-[#111111] dark:text-white hover:text-[#eb3a24] dark:hover:text-[#eb3a24] transition-colors">
           <span>Contacto</span>
-          <span class="text-xs font-mono text-[#737373] dark:text-[#666666] group-hover:text-[#eb3a24]">07</span>
+          <span class="text-[11px] font-mono text-[#737373] dark:text-[#666666] group-hover:text-[#eb3a24]">07</span>
         </a>
       </nav>
     </div>
+  </div>
 
-    <!-- Bottom Direct Contact Actions -->
-    <div class="pt-6 border-t border-[#e2e2dc] dark:border-[#222222] space-y-4">
-      <div class="grid grid-cols-2 gap-3">
-        <a href="https://wa.me/5215619956812?text=Hola%20Kike,%20me%20gustar%C3%ADa%20cotizar%20un%20proyecto%20web" target="_blank" rel="noopener" class="py-3 rounded-xl bg-[#25d366] text-[#072412] font-display font-bold text-xs uppercase tracking-wider text-center flex items-center justify-center gap-2 shadow-sm">
-          <i class="fa-brands fa-whatsapp text-sm"></i>
-          <span>WhatsApp</span>
-        </a>
-        <a href="mailto:enrique@codebymonk.com" class="py-3 rounded-xl bg-[#111111] dark:bg-white text-white dark:text-[#111111] font-display font-bold text-xs uppercase tracking-wider text-center flex items-center justify-center gap-2 shadow-sm">
-          <i class="fa-solid fa-envelope text-xs"></i>
-          <span>Email</span>
-        </a>
-      </div>
-      <div class="flex items-center justify-between text-[10px] font-mono text-[#737373] dark:text-[#888888]">
-        <span>CODEBYMONK &copy; <?php echo date('Y'); ?></span>
-        <span>CDMX / REMOTO</span>
-      </div>
+  <!-- Bottom Direct Contact Actions -->
+  <div class="pt-6 border-t border-[#e2e2dc] dark:border-[#222222] space-y-4">
+    <div class="grid grid-cols-2 gap-3">
+      <a href="https://wa.me/5215619956812?text=Hola%20Kike,%20me%20gustar%C3%ADa%20cotizar%20un%20proyecto%20web" target="_blank" rel="noopener" class="py-3.5 rounded-xl bg-[#25d366] text-[#072412] font-display font-bold text-xs uppercase tracking-wider text-center flex items-center justify-center gap-2 shadow-sm">
+        <i class="fa-brands fa-whatsapp text-base"></i>
+        <span>WhatsApp</span>
+      </a>
+      <a href="mailto:enrique@codebymonk.com" class="py-3.5 rounded-xl bg-[#111111] dark:bg-white text-white dark:text-[#111111] font-display font-bold text-xs uppercase tracking-wider text-center flex items-center justify-center gap-2 shadow-sm">
+        <i class="fa-solid fa-envelope text-sm"></i>
+        <span>Email</span>
+      </a>
+    </div>
+    <div class="flex items-center justify-between text-[10px] font-mono text-[#737373] dark:text-[#888888] pt-2">
+      <span>CODEBYMONK &copy; <?php echo date('Y'); ?></span>
+      <span>CDMX / REMOTO</span>
     </div>
   </div>
-</header>
+</div>
+
+<script>
+  (function() {
+    function initStandaloneMobileMenu() {
+      var openBtn = document.getElementById('mobile-menu-toggle');
+      var closeBtn = document.getElementById('mobile-menu-close');
+      var menu = document.getElementById('mobile-menu');
+      if (!openBtn || !menu) return;
+
+      function openMenu() {
+        menu.classList.remove('hidden');
+        menu.classList.add('flex');
+        document.body.style.overflow = 'hidden';
+      }
+
+      function closeMenu() {
+        menu.classList.remove('flex');
+        menu.classList.add('hidden');
+        document.body.style.overflow = '';
+      }
+
+      openBtn.addEventListener('click', function(e) {
+        e.preventDefault();
+        e.stopPropagation();
+        openMenu();
+      });
+
+      if (closeBtn) {
+        closeBtn.addEventListener('click', function(e) {
+          e.preventDefault();
+          e.stopPropagation();
+          closeMenu();
+        });
+      }
+
+      var links = menu.querySelectorAll('.mobile-nav-link');
+      for (var i = 0; i < links.length; i++) {
+        links[i].addEventListener('click', function() {
+          closeMenu();
+        });
+      }
+
+      window.addEventListener('keydown', function(e) {
+        if (e.key === 'Escape' && !menu.classList.contains('hidden')) {
+          closeMenu();
+        }
+      });
+    }
+
+    if (document.readyState === 'loading') {
+      document.addEventListener('DOMContentLoaded', initStandaloneMobileMenu);
+    } else {
+      initStandaloneMobileMenu();
+    }
+  })();
+</script>
 <main class="min-h-screen">
