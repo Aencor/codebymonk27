@@ -12,6 +12,7 @@
 $monk_includes = [
 	"functions/init.php", // Initial theme setup and constants
 	"functions/config.php", // Configuration
+	"functions/cpt.php", // Custom Post Types and Taxonomies
 	"functions/scripts.php", // Scripts and stylesheets
 	"functions/security.php", // Security focused settings
 	"functions/options.php", // ACF Theme Options

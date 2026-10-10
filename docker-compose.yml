@@ -2,11 +2,12 @@ version: "3.9"
 
 services:
   database:
+    container_name: codebymonk-db
     mem_limit: 2048m
-    image: mariadb
+    image: mariadb:10.11
     restart: unless-stopped
     ports:
-      - 3306:3306
+      - "${DB_PORT:-3310}:3306"
     env_file: .env
     environment:
       MYSQL_ROOT_PASSWORD: '${MYSQL_ROOT_PASSWORD}'
@@ -15,43 +16,74 @@ services:
       MYSQL_PASSWORD: '${MYSQL_PASSWORD}'
     volumes:
       - db-data:/var/lib/mysql
-    networks:
-      - wordpress-network
 
   phpmyadmin:
+    container_name: codebymonk-pma
     depends_on:
       - database
     image: phpmyadmin/phpmyadmin
     restart: unless-stopped
     ports:
-      - 8081:80
+      - "${PMA_PORT:-8087}:80"
     environment:
       PMA_HOST: database
       MYSQL_ROOT_PASSWORD: '${MYSQL_ROOT_PASSWORD}'
-    networks:
-      - wordpress-network
 
   wordpress:
+    container_name: codebymonk-wp
     depends_on:
       - database
-    image: wordpress
+    image: wordpress:latest
     restart: unless-stopped
     ports:
-      - 8080:80
+      - "${WP_PORT:-8086}:80"
     environment:
       WORDPRESS_DB_HOST: database:3306
       WORDPRESS_DB_NAME: '${MYSQL_DATABASE}'
       WORDPRESS_DB_USER: '${MYSQL_USER}'
       WORDPRESS_DB_PASSWORD: '${MYSQL_PASSWORD}'
+      WORDPRESS_CONFIG_EXTRA: |
+        define('WP_MEMORY_LIMIT', '512M');
+        define('WP_MAX_MEMORY_LIMIT', '512M');
+        if (isset($$_SERVER['HTTP_X_FORWARDED_PROTO']) && $$_SERVER['HTTP_X_FORWARDED_PROTO'] === 'https') {
+            $$_SERVER['HTTPS'] = 'on';
+        }
+        if (isset($$_SERVER['HTTP_HOST'])) {
+            $$scheme = (isset($$_SERVER['HTTPS']) && $$_SERVER['HTTPS'] === 'on') ? 'https' : 'http';
+            define('WP_HOME', $$scheme . '://' . $$_SERVER['HTTP_HOST']);
+            define('WP_SITEURL', $$scheme . '://' . $$_SERVER['HTTP_HOST']);
+        }
     volumes:
       - ./wp-content:/var/www/html/wp-content
       - ./uploads.ini:/usr/local/etc/php/conf.d/uploads.ini
     networks:
-      - wordpress-network
+      default:
+      proxy-network:
+        aliases:
+          - wordpress-codebymonk
+
+  wpcli:
+    image: wordpress:cli-2.11-php8.2
+    container_name: codebymonk-wpcli
+    user: "33:33"
+    profiles: ["tools"]
+    depends_on:
+      - database
+      - wordpress
+    volumes:
+      - ./wp-content:/var/www/html/wp-content
+      - ./uploads.ini:/usr/local/etc/php/conf.d/uploads.ini
+    environment:
+      WORDPRESS_DB_HOST: database:3306
+      WORDPRESS_DB_NAME: '${MYSQL_DATABASE}'
+      WORDPRESS_DB_USER: '${MYSQL_USER}'
+      WORDPRESS_DB_PASSWORD: '${MYSQL_PASSWORD}'
 
 volumes:
   db-data:
 
 networks:
-  wordpress-network:
-    driver: bridge
+  default:
+  proxy-network:
+    name: nathalielesbachescom_default
+    external: true

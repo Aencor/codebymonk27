@@ -5,7 +5,7 @@ require('dotenv').config();
 
 // The theme name should be located in your .env file
 const THEME_NAME = process.env.THEME_NAME || 'codebymonk',
-	PROXY = process.env.PROXY,
+	PROXY = process.env.PROXY || 'https://local.codebymonk.com',
 	THEME_DIRECTORY = `wp-content/themes/${THEME_NAME}`,
 	ASSETS_DIR = `${THEME_DIRECTORY}/assets`,
 	BUILD_DIR = `${ASSETS_DIR}/build`,
@@ -30,13 +30,12 @@ mix
 		processCssUrls: false,
 		postCss: [require('@tailwindcss/postcss'), require('autoprefixer')],
 	})
-	.sourceMaps(true, 'source-map')
-	.browserSync(PROXY);
+	.sourceMaps(true, 'source-map');
 
 mix.browserSync({
 	proxy: PROXY,
 	files: [
-		`${BUILD_DIR}/master.css`,
+		`${BUILD_DIR}/style.css`,
 		`${BUILD_DIR}/main.js`,
 		`${THEME_DIRECTORY}/**/*.+(html|php)`,
 	],
@@ -64,7 +63,7 @@ if (mix.inProduction()) {
 	console.log(BUILD_MESSAGE);
 	mix
 		.minify([
-			`${BUILD_DIR}/master.css`,
+			`${BUILD_DIR}/style.css`,
 			`${BUILD_DIR}/manifest.js`,
 			`${BUILD_DIR}/vendor.js`,
 			`${BUILD_DIR}/main.js`,

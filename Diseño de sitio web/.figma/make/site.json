@@ -1,0 +1,10 @@
+{
+  "description": "This web application enhances personal branding by showcasing portfolios and CVs, promoting services, and featuring a blog, all with a professional design.",
+  "robots": {
+    "index": false
+  },
+  "accessibility": {
+    "addBypassLinks": false,
+    "ignoreReducedMotion": false
+  }
+}

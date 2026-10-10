@@ -1,0 +1,75 @@
+{
+    "key": "group_cbm_portfolio_details",
+    "title": "Detalles del Proyecto",
+    "fields": [
+        {
+            "key": "field_cbm_project_url",
+            "label": "Link del Proyecto",
+            "name": "project_url",
+            "type": "url",
+            "instructions": "URL pública del proyecto (ej: https://nathalielesbaches.com)",
+            "required": 0,
+            "placeholder": "https://..."
+        },
+        {
+            "key": "field_cbm_project_description",
+            "label": "Descripción Breve",
+            "name": "project_description",
+            "type": "textarea",
+            "instructions": "Pequeña descripción del proyecto y su enfoque.",
+            "required": 0,
+            "rows": 3
+        },
+        {
+            "key": "field_cbm_project_challenge",
+            "label": "El Reto",
+            "name": "project_challenge",
+            "type": "textarea",
+            "instructions": "Cuál fue el principal reto u objetivo técnico / diseño.",
+            "required": 0,
+            "rows": 3
+        },
+        {
+            "key": "field_cbm_project_result",
+            "label": "El Resultado",
+            "name": "project_result",
+            "type": "textarea",
+            "instructions": "Resultados obtenidos (métricas, impacto, soluciones técnicas).",
+            "required": 0,
+            "rows": 3
+        },
+        {
+            "key": "field_cbm_project_client",
+            "label": "Cliente / Empresa",
+            "name": "project_client",
+            "type": "text",
+            "required": 0
+        },
+        {
+            "key": "field_cbm_project_year",
+            "label": "Año",
+            "name": "project_year",
+            "type": "text",
+            "default_value": "2026",
+            "required": 0
+        }
+    ],
+    "location": [
+        [
+            {
+                "param": "post_type",
+                "operator": "==",
+                "value": "portfolio"
+            }
+        ]
+    ],
+    "menu_order": 0,
+    "position": "normal",
+    "style": "default",
+    "label_placement": "top",
+    "instruction_placement": "label",
+    "hide_on_screen": "",
+    "active": true,
+    "description": "",
+    "show_in_rest": 1
+}

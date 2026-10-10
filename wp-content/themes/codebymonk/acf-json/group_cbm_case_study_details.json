@@ -1,0 +1,81 @@
+{
+    "key": "group_cbm_case_study_details",
+    "title": "Estructura del Caso de Estudio",
+    "fields": [
+        {
+            "key": "field_cs_what_was_there",
+            "label": "1. Qué Estaba (Situación Inicial)",
+            "name": "what_was_there",
+            "type": "textarea",
+            "instructions": "Descripción del estado inicial, problemas de diseño/conversión o limitaciones técnicas previas.",
+            "required": 0,
+            "rows": 4
+        },
+        {
+            "key": "field_cs_what_i_did",
+            "label": "2. Qué Hice (Estrategia y Solución)",
+            "name": "what_i_did",
+            "type": "textarea",
+            "instructions": "Estrategia implementada, rediseño de arquitectura y enfoque de producto.",
+            "required": 0,
+            "rows": 4
+        },
+        {
+            "key": "field_cs_how_i_did_it",
+            "label": "3. Cómo Lo Hice (Implementación Técnica)",
+            "name": "how_i_did_it",
+            "type": "textarea",
+            "instructions": "Stack tecnológico utilizado, desarrollo en bloques, animaciones GSAP, Tailwind y optimizaciones.",
+            "required": 0,
+            "rows": 4
+        },
+        {
+            "key": "field_cs_results_achieved",
+            "label": "4. Qué Resultados Dieron (Impacto & Métricas)",
+            "name": "results_achieved",
+            "type": "textarea",
+            "instructions": "Métricas clave, conversiones aumentadas, velocidad de carga y feedback del cliente.",
+            "required": 0,
+            "rows": 4
+        },
+        {
+            "key": "field_cs_project_url",
+            "label": "Link del Proyecto en Vivo",
+            "name": "project_url",
+            "type": "url",
+            "required": 0
+        },
+        {
+            "key": "field_cs_client",
+            "label": "Cliente / Empresa",
+            "name": "project_client",
+            "type": "text",
+            "required": 0
+        },
+        {
+            "key": "field_cs_year",
+            "label": "Año",
+            "name": "project_year",
+            "type": "text",
+            "default_value": "2026",
+            "required": 0
+        }
+    ],
+    "location": [
+        [
+            {
+                "param": "post_type",
+                "operator": "==",
+                "value": "case_study"
+            }
+        ]
+    ],
+    "menu_order": 0,
+    "position": "normal",
+    "style": "default",
+    "label_placement": "top",
+    "instruction_placement": "label",
+    "hide_on_screen": "",
+    "active": true,
+    "show_in_rest": 1
+}

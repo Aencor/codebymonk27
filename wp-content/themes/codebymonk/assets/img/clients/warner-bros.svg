@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" fill="currentColor">
+  <!-- Warner Bros. Shield -->
+  <path d="M50 5 C75 5, 88 18, 88 42 C88 72, 58 92, 50 95 C42 92, 12 72, 12 42 C12 18, 25 5, 50 5 Z" fill="none" stroke="currentColor" stroke-width="4.5"/>
+  <path d="M50 11 C70 11, 81 22, 81 42 C81 67, 56 84, 50 87 C44 84, 19 67, 19 42 C19 22, 30 11, 50 11 Z" fill="none" stroke="currentColor" stroke-width="2"/>
+  <!-- WB Monogram -->
+  <path d="M28 26 L36 68 L44 26 L52 68 L60 26 L69 26 L56 74 L48 74 L40 37 L32 74 L24 74 L15 26 Z" fill="currentColor"/>
+  <path d="M60 26 H74 C80 26, 84 29, 84 35 C84 40, 80 44, 75 46 C81 48, 85 53, 85 60 C85 68, 79 74, 71 74 H57 L60 26 Z M68 34 L66 45 H73 C76 45, 78 43, 78 39 C78 36, 76 34, 73 34 Z M65 52 L63 66 H71 C74 66, 77 64, 77 59 C77 55, 74 52, 71 52 Z" fill="currentColor"/>
+</svg>

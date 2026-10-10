@@ -1,12 +1,85 @@
 @import "tailwindcss";
 
+@import url('https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Plus+Jakarta+Sans:wght@400;500;600;700;800;900&family=Syne:wght@700;800;900&display=swap');
+
+@custom-variant dark (&:where(.dark, .dark *));
+
 @theme {
-  --color-primary: #4050c6;
-  --color-secondary: #00bfa5;
-  --color-tertiary: #52b1ff;
-  --color-dark: #071e3c;
-  --font-body: "Poppins", sans-serif;
-  --font-headline: "Open Sans", sans-serif;
+  --color-brand-bg: #f4f4f0;
+  --color-brand-dark: #0a0a0c;
+  --color-brand-blue: #163be6;
+  --color-brand-red: #eb3a24;
+  --color-brand-gray: #737373;
+  --color-brand-border: #e2e2dc;
+  
+  --font-sans: "Plus Jakarta Sans", system-ui, sans-serif;
+  --font-display: "Syne", "Plus Jakarta Sans", sans-serif;
+  --font-serif: "Instrument Serif", Georgia, serif;
 }
 
-@import 'all';
+/* Base Styles with Smooth Dark Mode Transitions */
+html {
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+body {
+  background-color: #f4f4f0;
+  color: #111111;
+  font-family: var(--font-sans);
+  -webkit-font-smoothing: antialiased;
+}
+
+html.dark body {
+  background-color: #0a0a0c;
+  color: #f3f4f6;
+}
+
+.font-display {
+  font-family: var(--font-display);
+}
+
+.font-serif-italic {
+  font-family: var(--font-serif);
+  font-style: italic;
+}
+
+/* Marquee animation */
+@keyframes ticker {
+  0% { transform: translate3d(0, 0, 0); }
+  100% { transform: translate3d(-50%, 0, 0); }
+}
+
+@keyframes ticker-reverse {
+  0% { transform: translate3d(-50%, 0, 0); }
+  100% { transform: translate3d(0, 0, 0); }
+}
+
+.animate-marquee {
+  display: flex;
+  width: 200%;
+  animation: ticker 28s linear infinite;
+}
+
+.animate-marquee:hover {
+  animation-play-state: paused;
+}
+
+.animate-marquee-reverse {
+  display: flex;
+  width: 200%;
+  animation: ticker-reverse 32s linear infinite;
+}
+
+.animate-marquee-reverse:hover {
+  animation-play-state: paused;
+}
+
+/* Circular Rotating Stamp */
+@keyframes rotate-badge {
+  from { transform: rotate(0deg); }
+  to { transform: rotate(360deg); }
+}
+
+.animate-spin-slow {
+  animation: rotate-badge 14s linear infinite;
+}

@@ -1,0 +1,7 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" fill="currentColor">
+  <!-- Disney Iconic D / Castle Silhouette -->
+  <path d="M50 10 L50 25 M45 18 L55 18" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+  <path d="M42 25 H58 V42 H42 Z M35 34 H42 V50 H35 Z M58 34 H65 V50 H58 Z M28 42 H35 V62 H28 Z M65 42 H72 V62 H65 Z M20 50 H80 V85 H20 Z" fill="none" stroke="currentColor" stroke-width="2.5"/>
+  <path d="M38 65 C38 58, 62 58, 62 65 C62 72, 62 85, 62 85 H38 Z" fill="currentColor"/>
+  <path d="M15 88 C35 76, 65 76, 85 88" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round"/>
+</svg>

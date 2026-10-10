@@ -1,0 +1,5 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" fill="currentColor">
+  <!-- Telmex Ribbon Loop -->
+  <path d="M22 24 H78 C84 24, 88 28, 88 34 C88 40, 84 44, 78 44 H58 V76 H42 V44 H22 C16 44, 12 40, 12 34 C12 28, 16 24, 22 24 Z" fill="currentColor"/>
+  <circle cx="50" cy="34" r="5" fill="#f4f4f0"/>
+</svg>
