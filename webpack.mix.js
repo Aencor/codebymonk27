@@ -17,6 +17,7 @@ mix
 	.webpackConfig({
 		devtool: 'source-map',
 		output: {
+			publicPath: `/wp-content/themes/${THEME_NAME}/assets/build/`,
 			chunkFilename: 'chunks/[name].js',
 		},
 		stats: {

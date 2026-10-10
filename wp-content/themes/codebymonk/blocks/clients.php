@@ -214,7 +214,7 @@ $clients_row_2 = [
 					<div class="flex-shrink-0 relative hover:z-20 inline-flex items-center gap-4 px-6 py-4 rounded-2xl bg-white/95 dark:bg-[#141418] border border-[#dcdcd4] dark:border-[#24242e] shadow-xs group hover:shadow-xl hover:-translate-y-1 transition-all duration-300 <?= $c['accent']; ?>">
 						<!-- Logo Vector Icon Container -->
 						<div class="w-10 h-10 rounded-xl bg-[#f0f0ea] dark:bg-[#1c1c24] flex items-center justify-center p-2 text-[#111111] dark:text-white group-hover:scale-110 transition-transform">
-							<img src="<?= esc_url($c['svg']); ?>" alt="<?= esc_attr($c['name']); ?>" class="w-full h-full object-contain dark:invert transition-all" />
+							<img src="<?= esc_url($c['svg']); ?>" alt="<?= esc_attr($c['name']); ?>" width="24" height="24" loading="lazy" decoding="async" class="w-full h-full object-contain dark:invert transition-all" />
 						</div>
 						<div class="flex flex-col">
 							<span class="font-display font-black text-sm sm:text-base tracking-tight text-[#111111] dark:text-white group-hover:text-inherit uppercase">
@@ -241,7 +241,7 @@ $clients_row_2 = [
 					<div class="flex-shrink-0 relative hover:z-20 inline-flex items-center gap-4 px-6 py-4 rounded-2xl bg-white/95 dark:bg-[#141418] border border-[#dcdcd4] dark:border-[#24242e] shadow-xs group hover:shadow-xl hover:-translate-y-1 transition-all duration-300 <?= $c['accent']; ?>">
 						<!-- Logo Vector Icon Container -->
 						<div class="w-10 h-10 rounded-xl bg-[#f0f0ea] dark:bg-[#1c1c24] flex items-center justify-center p-2 text-[#111111] dark:text-white group-hover:scale-110 transition-transform">
-							<img src="<?= esc_url($c['svg']); ?>" alt="<?= esc_attr($c['name']); ?>" class="w-full h-full object-contain dark:invert transition-all" />
+							<img src="<?= esc_url($c['svg']); ?>" alt="<?= esc_attr($c['name']); ?>" width="24" height="24" loading="lazy" decoding="async" class="w-full h-full object-contain dark:invert transition-all" />
 						</div>
 						<div class="flex flex-col">
 							<span class="font-display font-black text-sm sm:text-base tracking-tight text-[#111111] dark:text-white group-hover:text-inherit uppercase">

@@ -28,7 +28,7 @@ $start_img_url = get_template_directory_uri() . '/assets/img/start.jpg';
 						</div>
 
 						<div class="w-full aspect-[4/3] sm:aspect-[4/3] rounded-xl overflow-hidden bg-[#222222] relative mb-4">
-							<img src="<?= esc_url($start_img_url); ?>" alt="El comienzo - CodeByMonk" class="w-full h-full object-cover object-center group-hover:scale-105 transition-transform duration-700 ease-out" />
+							<img src="<?= esc_url($start_img_url); ?>" alt="El comienzo - CodeByMonk" width="450" height="338" loading="lazy" decoding="async" class="w-full h-full object-cover object-center group-hover:scale-105 transition-transform duration-700 ease-out" />
 							<div class="absolute inset-0 bg-gradient-to-t from-black/40 via-transparent to-transparent"></div>
 						</div>
 

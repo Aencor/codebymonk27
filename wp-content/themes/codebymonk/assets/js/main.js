@@ -9,6 +9,10 @@ const routes = new Router({
   common,
 });
 
-$(function () {
+if (document.readyState === 'loading') {
+  document.addEventListener('DOMContentLoaded', () => {
+    routes.loadEvents();
+  });
+} else {
   routes.loadEvents();
-});
+}

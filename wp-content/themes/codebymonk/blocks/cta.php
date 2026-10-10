@@ -29,9 +29,9 @@ $block_attrs = cbm_block_attributes($block, 'py-16 sm:py-24 md:py-32 bg-[#163be6
 					<span>Escribir por WhatsApp</span>
 				</a>
 
-				<a href="mailto:contacto@codebymonk.com" class="inline-flex items-center gap-2.5 px-6 sm:px-8 py-3.5 sm:py-4 rounded-full bg-white/10 hover:bg-white text-white hover:text-[#111111] border border-white/30 font-display font-bold text-xs sm:text-sm tracking-wide uppercase transition-all duration-300">
+				<a href="mailto:enrique@codebymonk.com" class="inline-flex items-center gap-2.5 px-6 sm:px-8 py-3.5 sm:py-4 rounded-full bg-white/10 hover:bg-white text-white hover:text-[#111111] border border-white/30 font-display font-bold text-xs sm:text-sm tracking-wide uppercase transition-all duration-300">
 					<i class="fa-solid fa-envelope text-xs"></i>
-					<span>contacto@codebymonk.com</span>
+					<span>enrique@codebymonk.com</span>
 				</a>
 			</div>
 

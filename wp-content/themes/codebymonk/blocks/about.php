@@ -29,7 +29,7 @@ $profile_img_url = get_template_directory_uri() . '/assets/img/profile.jpg';
 
 					<!-- Image Container -->
 					<div class="relative w-full h-full rounded-2xl md:rounded-3xl overflow-hidden border-2 border-white dark:border-[#22222a] shadow-xl bg-white dark:bg-[#141418]">
-						<img src="<?= esc_url($profile_img_url); ?>" alt="Kike - CodeByMonk" class="w-full h-full object-cover object-center transform group-hover:scale-105 transition-transform duration-500 ease-out" />
+						<img src="<?= esc_url($profile_img_url); ?>" alt="Kike - CodeByMonk" width="256" height="256" loading="lazy" decoding="async" class="w-full h-full object-cover object-center transform group-hover:scale-105 transition-transform duration-500 ease-out" />
 					</div>
 
 					<!-- Monk Emoji Badge -->

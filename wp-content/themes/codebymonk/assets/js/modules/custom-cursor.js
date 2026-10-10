@@ -70,35 +70,35 @@ export function initCustomCursor() {
     setRingY(ringPos.y);
   });
 
-  // Hover state handlers for interactive elements
+  // High-performance event delegation for hover states (No DOM querying loops)
   const interactiveSelector = 'a, button, [role="button"], input[type="submit"], input[type="button"], .group, #theme-toggle';
 
-  function attachHoverListeners() {
-    document.querySelectorAll(interactiveSelector).forEach((el) => {
-      el.addEventListener('mouseenter', () => {
-        ring.classList.add('cursor-hover');
-        gsap.to(dot, { scale: 1.6, duration: 0.2 });
-      });
+  document.addEventListener('mouseover', (e) => {
+    const target = e.target.closest ? e.target.closest(interactiveSelector) : null;
+    if (target) {
+      ring.classList.add('cursor-hover');
+      gsap.to(dot, { scale: 1.5, duration: 0.2 });
+    }
+  }, { passive: true });
 
-      el.addEventListener('mouseleave', () => {
-        ring.classList.remove('cursor-hover');
-        gsap.to(dot, { scale: 1, duration: 0.2 });
-      });
-    });
-  }
-
-  attachHoverListeners();
+  document.addEventListener('mouseout', (e) => {
+    const target = e.target.closest ? e.target.closest(interactiveSelector) : null;
+    if (target) {
+      ring.classList.remove('cursor-hover');
+      gsap.to(dot, { scale: 1, duration: 0.2 });
+    }
+  }, { passive: true });
 
   // Click pulse animation
   window.addEventListener('mousedown', () => {
     ring.classList.add('cursor-click');
     gsap.to(dot, { scale: 0.7, duration: 0.1 });
-  });
+  }, { passive: true });
 
   window.addEventListener('mouseup', () => {
     ring.classList.remove('cursor-click');
     gsap.to(dot, { scale: 1, duration: 0.15 });
-  });
+  }, { passive: true });
 }
 
 export default {

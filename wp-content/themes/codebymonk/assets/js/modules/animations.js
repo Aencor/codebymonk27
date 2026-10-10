@@ -204,9 +204,68 @@ function initGsapAnimations() {
   }
 }
 
+/**
+ * Mobile Navigation Drawer Toggle
+ */
+function initMobileMenu() {
+  const toggleBtn = document.getElementById('mobile-menu-toggle');
+  const menu = document.getElementById('mobile-menu');
+  const iconOpen = document.getElementById('mobile-menu-icon-open');
+  const iconClose = document.getElementById('mobile-menu-icon-close');
+  const navLinks = document.querySelectorAll('.mobile-nav-link');
+
+  if (!toggleBtn || !menu) return;
+
+  let isOpen = false;
+
+  function toggleMenu(forceState) {
+    isOpen = typeof forceState === 'boolean' ? forceState : !isOpen;
+    toggleBtn.setAttribute('aria-expanded', isOpen ? 'true' : 'false');
+    toggleBtn.setAttribute('aria-label', isOpen ? 'Cerrar menú' : 'Abrir menú');
+
+    if (isOpen) {
+      menu.classList.remove('opacity-0', 'pointer-events-none');
+      menu.classList.add('opacity-100', 'pointer-events-auto');
+      if (iconOpen && iconClose) {
+        iconOpen.classList.add('hidden');
+        iconClose.classList.remove('hidden');
+      }
+      document.body.style.overflow = 'hidden';
+    } else {
+      menu.classList.remove('opacity-100', 'pointer-events-auto');
+      menu.classList.add('opacity-0', 'pointer-events-none');
+      if (iconOpen && iconClose) {
+        iconOpen.classList.remove('hidden');
+        iconClose.classList.add('hidden');
+      }
+      document.body.style.overflow = '';
+    }
+  }
+
+  toggleBtn.addEventListener('click', (e) => {
+    e.stopPropagation();
+    toggleMenu();
+  });
+
+  // Close menu when clicking any mobile navigation anchor link
+  navLinks.forEach((link) => {
+    link.addEventListener('click', () => {
+      toggleMenu(false);
+    });
+  });
+
+  // Close on Escape key
+  window.addEventListener('keydown', (e) => {
+    if (e.key === 'Escape' && isOpen) {
+      toggleMenu(false);
+    }
+  });
+}
+
 export default {
   init() {
     initDarkMode();
+    initMobileMenu();
     initMobilePortfolioSlider();
     initCaseStudiesSlider();
     initRelatedArticlesSlider();

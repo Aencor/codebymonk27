@@ -1,0 +1,31 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="100%" height="100%">
+  <defs>
+    <linearGradient id="bgGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#141417" />
+      <stop offset="100%" stop-color="#08080a" />
+    </linearGradient>
+    <linearGradient id="accentGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#ff4834" />
+      <stop offset="100%" stop-color="#eb3a24" />
+    </linearGradient>
+  </defs>
+  
+  <!-- Rounded Base Icon Background -->
+  <rect width="512" height="512" rx="128" fill="url(#bgGrad)" />
+  <rect x="8" y="8" width="496" height="496" rx="120" fill="none" stroke="#26262c" stroke-width="8" />
+
+  <!-- Monogram Logo (••) Signature -->
+  <g transform="translate(0, 0)">
+    <!-- Left Parenthesis -->
+    <path d="M 175 190 C 145 225 145 287 175 322" fill="none" stroke="#ffffff" stroke-width="32" stroke-linecap="round" />
+    
+    <!-- Left Eye Dot (White) -->
+    <circle cx="225" cy="256" r="22" fill="#ffffff" />
+    
+    <!-- Right Eye Dot (Vibrant Brand Red #eb3a24) -->
+    <circle cx="287" cy="256" r="22" fill="url(#accentGrad)" />
+    
+    <!-- Right Parenthesis -->
+    <path d="M 337 190 C 367 225 367 287 337 322" fill="none" stroke="#ffffff" stroke-width="32" stroke-linecap="round" />
+  </g>
+</svg>

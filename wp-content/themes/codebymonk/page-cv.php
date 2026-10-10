@@ -52,7 +52,7 @@ $profile_img_url = get_template_directory_uri() . '/assets/img/profile.jpg';
 				<div class="relative flex-shrink-0 group">
 					<div class="absolute -inset-1.5 bg-gradient-to-tr from-[#eb3a24] via-[#163be6] to-cyan-400 rounded-3xl blur-md opacity-50 group-hover:opacity-80 transition duration-500"></div>
 					<div class="relative w-36 h-36 sm:w-44 sm:h-44 rounded-2xl md:rounded-3xl overflow-hidden border-2 border-white dark:border-[#24242e] bg-white dark:bg-[#141418] shadow-2xl">
-						<img src="<?= esc_url($profile_img_url); ?>" alt="Alberto Enrique Contreras Romero" class="w-full h-full object-cover object-center group-hover:scale-105 transition-transform duration-500" />
+						<img src="<?= esc_url($profile_img_url); ?>" alt="Alberto Enrique Contreras Romero" width="240" height="240" loading="lazy" decoding="async" class="w-full h-full object-cover object-center group-hover:scale-105 transition-transform duration-500" />
 					</div>
 					<div class="absolute -bottom-2.5 -right-2.5 bg-emerald-500 text-white text-[10px] font-mono font-bold px-2.5 py-1 rounded-full shadow-lg border-2 border-white dark:border-[#0a0a0c] flex items-center gap-1.5">
 						<span class="w-2 h-2 rounded-full bg-white animate-pulse"></span>
