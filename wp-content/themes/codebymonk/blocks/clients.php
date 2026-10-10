@@ -207,11 +207,11 @@ $clients_row_2 = [
 	</div>
 
 	<!-- Infinite Ticker Track 1 (Left Scrolling) -->
-	<div class="relative w-full overflow-hidden mb-4 sm:mb-6">
+	<div class="relative w-full overflow-hidden py-3 mb-2 sm:mb-4">
 		<div class="animate-marquee flex items-center gap-4 sm:gap-6 whitespace-nowrap will-change-transform">
 			<?php for ($r = 0; $r < 2; $r++): ?>
 				<?php foreach ($clients_row_1 as $c): ?>
-					<div class="flex-shrink-0 inline-flex items-center gap-4 px-6 py-4 rounded-2xl bg-white/95 dark:bg-[#141418] border border-[#dcdcd4] dark:border-[#24242e] shadow-xs group hover:shadow-xl hover:-translate-y-0.5 transition-all duration-300 <?= $c['accent']; ?>">
+					<div class="flex-shrink-0 relative hover:z-20 inline-flex items-center gap-4 px-6 py-4 rounded-2xl bg-white/95 dark:bg-[#141418] border border-[#dcdcd4] dark:border-[#24242e] shadow-xs group hover:shadow-xl hover:-translate-y-1 transition-all duration-300 <?= $c['accent']; ?>">
 						<!-- Logo Vector Icon Container -->
 						<div class="w-10 h-10 rounded-xl bg-[#f0f0ea] dark:bg-[#1c1c24] flex items-center justify-center p-2 text-[#111111] dark:text-white group-hover:scale-110 transition-transform">
 							<img src="<?= esc_url($c['svg']); ?>" alt="<?= esc_attr($c['name']); ?>" class="w-full h-full object-contain dark:invert transition-all" />
@@ -234,11 +234,11 @@ $clients_row_2 = [
 	</div>
 
 	<!-- Infinite Ticker Track 2 (Right / Reverse Scrolling) -->
-	<div class="relative w-full overflow-hidden">
+	<div class="relative w-full overflow-hidden py-3">
 		<div class="animate-marquee-reverse flex items-center gap-4 sm:gap-6 whitespace-nowrap will-change-transform">
 			<?php for ($r = 0; $r < 2; $r++): ?>
 				<?php foreach ($clients_row_2 as $c): ?>
-					<div class="flex-shrink-0 inline-flex items-center gap-4 px-6 py-4 rounded-2xl bg-white/95 dark:bg-[#141418] border border-[#dcdcd4] dark:border-[#24242e] shadow-xs group hover:shadow-xl hover:-translate-y-0.5 transition-all duration-300 <?= $c['accent']; ?>">
+					<div class="flex-shrink-0 relative hover:z-20 inline-flex items-center gap-4 px-6 py-4 rounded-2xl bg-white/95 dark:bg-[#141418] border border-[#dcdcd4] dark:border-[#24242e] shadow-xs group hover:shadow-xl hover:-translate-y-1 transition-all duration-300 <?= $c['accent']; ?>">
 						<!-- Logo Vector Icon Container -->
 						<div class="w-10 h-10 rounded-xl bg-[#f0f0ea] dark:bg-[#1c1c24] flex items-center justify-center p-2 text-[#111111] dark:text-white group-hover:scale-110 transition-transform">
 							<img src="<?= esc_url($c['svg']); ?>" alt="<?= esc_attr($c['name']); ?>" class="w-full h-full object-contain dark:invert transition-all" />

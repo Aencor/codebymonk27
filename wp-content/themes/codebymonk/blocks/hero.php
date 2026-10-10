@@ -6,7 +6,10 @@ $block_attrs = cbm_block_attributes($block, 'relative pt-8 sm:pt-12 md:pt-20 pb-
 ?>
 
 <section <?= $block_attrs; ?>>
-	<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+	<!-- Three.js Interactive 3D Background Canvas -->
+	<canvas id="hero-three-canvas" class="pointer-events-none absolute inset-0 w-full h-full z-0 opacity-70 dark:opacity-85 transition-opacity duration-700"></canvas>
+
+	<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
 		
 		<!-- Top Meta Tag -->
 		<div class="flex items-center justify-between mb-6 sm:mb-8 pb-3 sm:pb-4 border-b border-[#e2e2dc]/80 dark:border-[#222222] text-[10px] sm:text-xs font-mono font-semibold uppercase tracking-widest text-[#737373] dark:text-[#888888]">
@@ -97,7 +100,7 @@ $block_attrs = cbm_block_attributes($block, 'relative pt-8 sm:pt-12 md:pt-20 pb-
 	</div>
 
 	<!-- Philosophy Statement -->
-	<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-12 sm:pt-16 md:pt-24">
+	<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-12 sm:pt-16 md:pt-24 relative z-10">
 		<div class="grid grid-cols-1 lg:grid-cols-12 gap-4 sm:gap-6 items-start">
 			<div class="lg:col-span-3 text-[10px] sm:text-xs font-mono uppercase tracking-widest text-[#737373] dark:text-[#888888] pt-1 sm:pt-2">
 				// FILOSOFÍA DE TRABAJO

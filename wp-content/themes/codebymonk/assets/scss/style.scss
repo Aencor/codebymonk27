@@ -83,3 +83,58 @@ html.dark body {
 .animate-spin-slow {
   animation: rotate-badge 14s linear infinite;
 }
+
+/* Custom Animated Cursor */
+@media (hover: hover) and (pointer: fine) {
+  .custom-cursor-dot {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    background-color: #eb3a24;
+    pointer-events: none;
+    z-index: 9999;
+    transform: translate(-50%, -50%);
+    transition: opacity 0.2s ease;
+    mix-blend-mode: difference;
+  }
+
+  .custom-cursor-ring {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 36px;
+    height: 36px;
+    border-radius: 50%;
+    border: 1.5px solid rgba(235, 58, 36, 0.7);
+    pointer-events: none;
+    z-index: 9998;
+    transform: translate(-50%, -50%);
+    transition: width 0.3s cubic-bezier(0.25, 1, 0.5, 1), 
+                height 0.3s cubic-bezier(0.25, 1, 0.5, 1), 
+                background-color 0.3s ease, 
+                border-color 0.3s ease, 
+                opacity 0.2s ease;
+    mix-blend-mode: difference;
+  }
+
+  .custom-cursor-ring.cursor-hover {
+    width: 60px;
+    height: 60px;
+    background-color: rgba(235, 58, 36, 0.2);
+    border-color: #eb3a24;
+  }
+
+  .custom-cursor-ring.cursor-click {
+    transform: translate(-50%, -50%) scale(0.8);
+  }
+}
+
+@media (hover: none), (pointer: coarse) {
+  .custom-cursor-dot,
+  .custom-cursor-ring {
+    display: none !important;
+  }
+}
