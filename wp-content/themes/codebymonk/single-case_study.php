@@ -65,7 +65,7 @@ while (have_posts()) : the_post();
 						¿Qué Estaba? <span class="text-sm font-sans font-normal text-[#737373] lowercase block sm:inline sm:ml-2">Situación inicial y fricciones previas</span>
 					</h2>
 					<div class="text-sm sm:text-base text-[#444444] dark:text-[#b4b4be] leading-relaxed font-light space-y-4">
-						<p><?= esc_html($what_was); ?></p>
+						<div class="whitespace-pre-line"><?= esc_html($what_was); ?></div>
 					</div>
 				</div>
 			<?php endif; ?>
@@ -81,7 +81,7 @@ while (have_posts()) : the_post();
 						¿Qué Hice? <span class="text-sm font-sans font-normal text-[#737373] lowercase block sm:inline sm:ml-2">Propuesta de producto y arquitectura</span>
 					</h2>
 					<div class="text-sm sm:text-base text-[#444444] dark:text-[#b4b4be] leading-relaxed font-light space-y-4">
-						<p><?= esc_html($what_did); ?></p>
+						<div class="whitespace-pre-line"><?= esc_html($what_did); ?></div>
 					</div>
 				</div>
 			<?php endif; ?>
@@ -94,10 +94,10 @@ while (have_posts()) : the_post();
 						<span>Fase 03 // Desarrollo</span>
 					</div>
 					<h2 class="font-display font-black text-2xl sm:text-3xl text-[#111111] dark:text-white uppercase tracking-tight mb-4">
-						¿Cómo Lo Hice? <span class="text-sm font-sans font-normal text-[#737373] lowercase block sm:inline sm:ml-2">Implementación técnica y bloques</span>
+						¿Cómo Lo Hice? <span class="text-sm font-sans font-normal text-[#737373] lowercase block sm:inline sm:ml-2">Implementación técnica y arquitectura</span>
 					</h2>
 					<div class="text-sm sm:text-base text-[#444444] dark:text-[#b4b4be] leading-relaxed font-light space-y-4">
-						<p><?= esc_html($how_did); ?></p>
+						<div class="whitespace-pre-line"><?= esc_html($how_did); ?></div>
 					</div>
 				</div>
 			<?php endif; ?>
@@ -113,7 +113,7 @@ while (have_posts()) : the_post();
 						¿Qué Resultados Dieron? <span class="text-sm font-sans font-normal text-[#888888] lowercase block sm:inline sm:ml-2">Métricas y valor comercial obtenido</span>
 					</h2>
 					<div class="text-sm sm:text-base text-[#d1d5db] leading-relaxed font-light space-y-4">
-						<p><?= esc_html($results); ?></p>
+						<div class="whitespace-pre-line"><?= esc_html($results); ?></div>
 					</div>
 				</div>
 			<?php endif; ?>

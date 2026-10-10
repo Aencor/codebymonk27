@@ -132,7 +132,7 @@ $profile_img_url = get_template_directory_uri() . '/assets/img/profile.jpg';
 						<strong class="font-bold text-[#111111] dark:text-white">Senior FullStack WordPress Developer and Web Architect</strong> with 20+ years of hands-on experience delivering high-performance digital platforms for agencies, enterprise clients, and global brands.
 					</p>
 					<p class="text-sm sm:text-base text-[#444444] dark:text-[#a0a0aa] leading-relaxed font-light">
-						Self-taught and results-driven, with deep expertise in modular WordPress architecture (Gutenberg + ACF Pro), advanced WooCommerce customization, scalable CRM integrations (HubSpot, Salesforce, Attio), and multi-platform business process automation (Zapier, Make). Proven track record working with clients including <strong class="text-[#163be6] dark:text-cyan-400 font-medium">Warner Bros, Disney LATAM, and América Móvil</strong>.
+						Self-taught and results-driven, with deep expertise in modular WordPress architecture (Gutenberg + ACF Pro), custom membership & user profile systems, advanced WooCommerce customization, scalable CRM integrations (HubSpot, Salesforce, Attio), and multi-platform business process automation (Zapier, Make). Proven track record working with clients including <strong class="text-[#163be6] dark:text-cyan-400 font-medium">Attikka, Warner Bros, Disney LATAM, and América Móvil</strong>.
 					</p>
 				</div>
 				<div class="lang-es hidden space-y-3">
@@ -140,7 +140,7 @@ $profile_img_url = get_template_directory_uri() . '/assets/img/profile.jpg';
 						<strong class="font-bold text-[#111111] dark:text-white">Desarrollador FullStack Senior de WordPress y Arquitecto Web</strong> con más de 20 años de experiencia creando plataformas digitales de alto rendimiento para agencias, empresas y marcas globales.
 					</p>
 					<p class="text-sm sm:text-base text-[#444444] dark:text-[#a0a0aa] leading-relaxed font-light">
-						Autodidacta y orientado a resultados, con profunda experiencia en arquitectura modular de WordPress (Gutenberg + ACF Pro), personalización avanzada de WooCommerce, integraciones de CRM escalables (HubSpot, Salesforce, Attio) y automatización de procesos de negocio (Zapier, Make). Historial comprobado con clientes como <strong class="text-[#163be6] dark:text-cyan-400 font-medium">Warner Bros, Disney LATAM y América Móvil</strong>.
+						Autodidacta y orientado a resultados, con profunda experiencia en arquitectura modular de WordPress (Gutenberg + ACF Pro), desarrollo de sistemas de perfiles de usuario y membresías, personalización avanzada de WooCommerce, integraciones de CRM escalables (HubSpot, Salesforce, Attio) y automatización de procesos de negocio (Zapier, Make). Historial comprobado con clientes como <strong class="text-[#163be6] dark:text-cyan-400 font-medium">Attikka, Warner Bros, Disney LATAM y América Móvil</strong>.
 					</p>
 				</div>
 			</div>
@@ -254,14 +254,14 @@ $profile_img_url = get_template_directory_uri() . '/assets/img/profile.jpg';
 
 			<div class="space-y-8 relative before:absolute before:inset-0 before:left-3 md:before:left-4 before:w-[2px] before:bg-gradient-to-b before:from-[#163be6] before:via-[#eb3a24] before:to-[#222222] pl-8 md:pl-12">
 				
-				<!-- Role 0: Nathalie Lesbaches (NEW - Mar 2026 - Present) -->
+				<!-- Role 0: Nathalie Lesbaches (CURRENT - May 2025 - Present) -->
 				<div class="relative group">
 					<div class="absolute -left-8 md:-left-12 top-1.5 w-6 h-6 rounded-full bg-white dark:bg-[#0a0a0c] border-4 border-[#163be6] shadow-md group-hover:scale-125 transition-transform"></div>
 					<div class="p-6 rounded-2xl bg-white dark:bg-[#121216] border-2 border-[#163be6]/50 dark:border-[#163be6]/60 shadow-lg space-y-3 hover:border-[#163be6] transition-colors">
 						<div class="flex flex-col sm:flex-row sm:items-center justify-between gap-1">
 							<h3 class="text-base sm:text-lg font-bold text-[#111111] dark:text-white flex items-center gap-2">
 								Nathalie Lesbaches <span class="font-normal text-[#666666] dark:text-[#999999]">|</span> Lead Developer
-								<span class="px-2 py-0.5 rounded-md bg-[#163be6]/10 text-[#163be6] dark:text-cyan-400 text-[10px] font-mono font-bold uppercase">LATEST</span>
+								<span class="px-2 py-0.5 rounded-md bg-[#163be6]/10 text-[#163be6] dark:text-cyan-400 text-[10px] font-mono font-bold uppercase">CURRENT</span>
 							</h3>
 							<span class="text-xs font-mono font-bold text-[#163be6] dark:text-cyan-400 px-2.5 py-0.5 rounded-full bg-blue-50 dark:bg-blue-950/50 w-fit">
 								<span class="lang-en">May 2025 – Present</span>
@@ -287,6 +287,38 @@ $profile_img_url = get_template_directory_uri() . '/assets/img/profile.jpg';
 							<li>Implementación de infraestructura de analítica y tracking con Google Tag Manager (GTM) y configuración de píxeles de conversión.</li>
 							<li>Generación y customización de reportes avanzados de ventas y métricas de negocio con exportación automatizada de datos.</li>
 							<li>Gestión integral del proyecto técnico, planeación de sprints y ejecución del roadmap de producto.</li>
+						</ul>
+					</div>
+				</div>
+
+				<!-- Role 1: Attikka (Jun 2026 - Present) -->
+				<div class="relative group">
+					<div class="absolute -left-8 md:-left-12 top-1.5 w-6 h-6 rounded-full bg-white dark:bg-[#0a0a0c] border-4 border-[#eb3a24] shadow-md group-hover:scale-125 transition-transform"></div>
+					<div class="p-6 rounded-2xl bg-white dark:bg-[#121216] border border-[#e2e2dc] dark:border-[#22222a] shadow-sm space-y-3 hover:border-[#eb3a24] transition-colors">
+						<div class="flex flex-col sm:flex-row sm:items-center justify-between gap-1">
+							<h3 class="text-base sm:text-lg font-bold text-[#111111] dark:text-white flex items-center gap-2">
+								Attikka <span class="font-normal text-[#666666] dark:text-[#999999]">|</span> Lead FullStack Developer & Web Architect
+							</h3>
+							<span class="text-xs font-mono font-bold text-[#eb3a24] px-2.5 py-0.5 rounded-full bg-red-50 dark:bg-red-950/50 w-fit">
+								<span class="lang-en">Jun 2026 – Present</span>
+								<span class="lang-es hidden">Junio 2026 – Presente</span>
+							</span>
+						</div>
+						
+						<!-- English Description -->
+						<ul class="lang-en space-y-2 text-xs sm:text-sm text-[#444444] dark:text-[#b0b0b8] list-disc list-inside">
+							<li>Architected and developed the official digital platform and website for <strong class="text-[#111111] dark:text-white">Fundación Attikka</strong>.</li>
+							<li>Engineered a custom member and user profile management system for ACLC, building their digital platforms at <strong class="text-[#111111] dark:text-white">aclc.us</strong>.</li>
+							<li>Architected and launched high-performance eCommerce platforms for <strong class="text-[#111111] dark:text-white">Knowledgism (knowledgism.com)</strong> and <strong class="text-[#111111] dark:text-white">Zones of Life (zonesoflife.com)</strong>.</li>
+							<li>Developed bespoke Gutenberg block architectures, secure user authentication workflows, and custom WooCommerce payment pipelines.</li>
+						</ul>
+
+						<!-- Spanish Description -->
+						<ul class="lang-es hidden space-y-2 text-xs sm:text-sm text-[#444444] dark:text-[#b0b0b8] list-disc list-inside">
+							<li>Arquitectura y desarrollo del sitio web y plataforma oficial para la <strong class="text-[#111111] dark:text-white">Fundación Attikka</strong>.</li>
+							<li>Desarrollo del sistema integral de perfiles de usuario y membresías para ACLC, creando su plataforma digital oficial en <strong class="text-[#111111] dark:text-white">aclc.us</strong>.</li>
+							<li>Desarrollo e implementación de las plataformas de eCommerce para <strong class="text-[#111111] dark:text-white">Knowledgism (knowledgism.com)</strong> y <strong class="text-[#111111] dark:text-white">Zones of Life (zonesoflife.com)</strong>.</li>
+							<li>Creación de bloques modulares para Gutenberg, integraciones seguras de autenticación de usuarios y pasarelas de pago con WooCommerce.</li>
 						</ul>
 					</div>
 				</div>
